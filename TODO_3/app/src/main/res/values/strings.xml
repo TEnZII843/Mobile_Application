@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TODO_3</string>
     <string name="send">Send</string>
-    <string name="textview">Message recieved</string>
+    <string name="textview">Message Recieved</string>
 </resources>

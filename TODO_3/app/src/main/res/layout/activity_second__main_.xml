@@ -7,10 +7,14 @@
     tools:context=".Second_Main_Activity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="173dp"
-        android:layout_height="85dp"
+        android:id="@+id/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.214"
