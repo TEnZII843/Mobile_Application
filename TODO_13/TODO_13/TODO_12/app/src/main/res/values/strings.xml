@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TODO_12</string>
+    <string name="droid_dessert">DROID DESSERT</string>
+    <string name="donut_are_glazed_adn_sprinkled_with_candy">Donut are glazed and sprinkled with candy</string>
+    <string name="ice_cream_sandwiches_have_chocolate_wafers_and_vanilla_filling">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+    <string name="froyo_is_premium_self_serve_frozen_yogurt">FroYo is premium self-serve frozen yogurt</string>
+    <string name="donut">You ordered a donut.</string>
+    <string name="icecream">You ordered an Ice Cream Sandwich.</string>
+    <string name="froyo">You ordered a Froyo.</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="phonenum">Enter number</string>
+    <string name="enter_address">Enter address</string>
+    <string name="choose_a_delivery_method">Choose a delivery method:</string>
+    <string name="same_day_messanger_service">Same day messanger service</string>
+    <string name="next_day_ground_delivery">Next day ground delivery</string>
+    <string name="pick_up">Pick up</string>
+    <string-array name="spinnerlist">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+</resources>
