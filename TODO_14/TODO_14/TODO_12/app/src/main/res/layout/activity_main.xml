@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:theme="@style/Theme.TODO_12.AppBarOverlay"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id = "@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints"
+            android:theme="@style/Theme.TODO_12.PopupOverlay"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="306dp"
+        android:layout_height="90dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="@string/droid_dessert"
+        android:textAlignment="center"
+        android:textColor="#6A6A6A"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <RelativeLayout
+        android:layout_width="407dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="4dp"
+        android:background="#CCCCCC"
+        android:onClick="Donut"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:src="@drawable/donut2" />
+
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="casual"
+            android:text="@string/donut_are_glazed_adn_sprinkled_with_candy"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="406dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="4dp"
+        android:background="#CCCCCC"
+        android:onClick="Icecream"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:src="@drawable/icecream2" />
+
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="casual"
+            android:text="@string/ice_cream_sandwiches_have_chocolate_wafers_and_vanilla_filling"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="407dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="4dp"
+        android:background="#CCCCCC"
+        android:onClick="FroYo"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="151dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/fo" />
+
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="casual"
+            android:text="@string/froyo_is_premium_self_serve_frozen_yogurt"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="65dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:onClick="order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24"
+        android:contentDescription="@string/todo"
+        android:focusable="true" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

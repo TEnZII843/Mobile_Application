@@ -1,0 +1,86 @@
+package bt.edu.todo_12;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class Order_Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    Spinner spinner;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_order);
+
+        // Get the intent and its data.
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        TextView textView = findViewById(R.id.header);
+        textView.setText(message);
+
+        // Create the spinner.
+        Spinner spinner = findViewById(R.id.spinner);
+        if (spinner != null) {
+            spinner.setOnItemSelectedListener(this);
+        }
+
+        // Create an ArrayAdapter using the string array and default spinner
+        // layout.
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.spinnerlist,
+                android.R.layout.simple_spinner_item);
+
+        // Specify the layout to use when the list of choices appears.
+        adapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner.
+        if (spinner != null) {
+            spinner.setAdapter(adapter);
+        }
+    }
+
+    public void radio(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+        switch (view.getId()) {
+            case R.id.Sameday:
+                    displayToast(getString(R.string.same_day_messanger_service));
+                break;
+            case R.id.Nextday:
+                    displayToast(getString(R.string.next_day_ground_delivery));
+                break;
+            case R.id.Pickup:
+                    displayToast(getString(R.string.pick_up));
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void displayToast(String message) {
+        Toast.makeText(getApplicationContext(), message,
+                Toast.LENGTH_SHORT).show();
+    }
+
+    // Interface callback for when any spinner item is selected.
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String spinnerLabel = adapterView.getItemAtPosition(i).toString();
+        displayToast(spinnerLabel);
+    }
+
+    // Interface callback for when no spinner item is selected.
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        // Do nothing.
+    }
+}
