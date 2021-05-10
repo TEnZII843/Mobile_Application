@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TODO_15</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fragment1</string>
+    <string name="Fragment2">Fragemnt2</string>
+    <string name="Fragment3">Fragemnt3</string>
+</resources>
