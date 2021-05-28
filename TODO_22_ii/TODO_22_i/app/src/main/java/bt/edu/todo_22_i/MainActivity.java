@@ -32,12 +32,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mBookInput = (EditText)findViewById(R.id.bookinput);
         mtitleText = (TextView)findViewById(R.id.titleText);
         mAuthorText = (TextView)findViewById(R.id.authorText);
+
+        if(getSupportLoaderManager().getLoader(0)!=null){
+            getSupportLoaderManager().initLoader(0,null,this);
+        }
     }
     public void searchBook(View view) {
         String queryString = mBookInput.getText().toString();
-        Bundle queryBundle = new Bundle();
-        queryBundle.putString("queryString", queryString);
-        getSupportLoaderManager().restartLoader(0, queryBundle, this);
         // Hide the keyboard when the button is pushed.
         InputMethodManager inputManager = (InputMethodManager)
                 getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
         if (networkInfo != null && networkInfo.isConnected() && queryString.length() != 0) {
+            Bundle queryBundle = new Bundle();
+            queryBundle.putString("queryString", queryString);
+            getSupportLoaderManager().restartLoader(0, queryBundle, this);
             mAuthorText.setText("");
             mtitleText.setText("Loading");
         } else {
